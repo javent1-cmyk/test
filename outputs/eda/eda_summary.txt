@@ -1,0 +1,12 @@
+Drug Review Dataset EDA Summary
+================================
+
+Total cleaned rows: 3784
+Total columns: 13
+
+EDA outputs generated:
+- top_drugs
+- bottom_drugs
+- condition_ratings
+- rating_distribution
+- review_length_analysis

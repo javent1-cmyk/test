@@ -1,0 +1,18 @@
+Original Rows: 5605
+Cleaned Rows: 3784
+
+Cleaned Schema:
+root
+ |-- _c0: string (nullable = true)
+ |-- urlDrugName: string (nullable = true)
+ |-- rating: string (nullable = true)
+ |-- effectiveness: string (nullable = true)
+ |-- sideEffects: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- benefitsReview: string (nullable = true)
+ |-- sideEffectsReview: string (nullable = true)
+ |-- commentsReview: string (nullable = true)
+ |-- drug_name: string (nullable = true)
+ |-- condition_clean: string (nullable = true)
+ |-- review_length: integer (nullable = true)
+ |-- positive_review: integer (nullable = false)

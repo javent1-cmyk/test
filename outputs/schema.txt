@@ -1,0 +1,13 @@
+Total Rows: 5605
+
+Schema:
+root
+ |-- _c0: string (nullable = true)
+ |-- urlDrugName: string (nullable = true)
+ |-- rating: string (nullable = true)
+ |-- effectiveness: string (nullable = true)
+ |-- sideEffects: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- benefitsReview: string (nullable = true)
+ |-- sideEffectsReview: string (nullable = true)
+ |-- commentsReview: string (nullable = true)

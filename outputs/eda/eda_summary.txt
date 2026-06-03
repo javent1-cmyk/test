@@ -10,3 +10,4 @@ EDA outputs generated:
 - condition_ratings
 - rating_distribution
 - review_length_analysis
+- side_effect_ratings

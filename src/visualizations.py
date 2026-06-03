@@ -70,4 +70,26 @@ plt.tight_layout()
 plt.savefig("outputs/charts/avg_rating_by_effectiveness.png")
 plt.close()
 
+# Chart 4: Average Rating by Side Effects Category
+side_effect_rating = (
+    df.groupBy("sideEffects")
+      .agg(avg("rating").alias("avg_rating"))
+      .orderBy(desc("avg_rating"))
+)
+
+pdf = side_effect_rating.toPandas()
+
+plt.figure(figsize=(9, 5))
+plt.bar(pdf["sideEffects"], pdf["avg_rating"])
+plt.title("Average Rating by Side Effects Category")
+plt.xlabel("Side Effects Category")
+plt.ylabel("Average Rating")
+plt.xticks(rotation=25, ha="right")
+plt.tight_layout()
+plt.savefig("outputs/charts/avg_rating_by_side_effects.png")
+plt.close()
+
+
+
+
 spark.stop()

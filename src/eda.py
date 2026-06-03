@@ -96,7 +96,22 @@ review_length_analysis.coalesce(1).write.mode("overwrite").csv(
     "outputs/eda/review_length_analysis",
     header=True
 )
+# Question 6: How do side effects relate to average satisfaction ratings?
+side_effect_ratings = (
+    df.groupBy("sideEffects")
+      .agg(
+          avg("rating").alias("avg_rating"),
+          count("*").alias("review_count")
+      )
+      .orderBy(desc("avg_rating"))
+)
 
+side_effect_ratings.show()
+
+side_effect_ratings.coalesce(1).write.mode("overwrite").csv(
+    "outputs/eda/side_effect_ratings",
+    header=True
+)
 # Save summary notes
 with open("outputs/eda/eda_summary.txt", "w") as f:
     f.write("Drug Review Dataset EDA Summary\n")
@@ -109,5 +124,6 @@ with open("outputs/eda/eda_summary.txt", "w") as f:
     f.write("- condition_ratings\n")
     f.write("- rating_distribution\n")
     f.write("- review_length_analysis\n")
+    f.write("- side_effect_ratings\n")
 
 spark.stop()

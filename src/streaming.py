@@ -19,8 +19,8 @@ schema = StructType([
 stream_df = spark.readStream \
     .schema(schema) \
     .option("header", True) \
-    .csv("stream_input/*")
-
+    .option("recursiveFileLookup", "true") \
+    .csv("stream_input")
 satisfaction_by_drug = (
     stream_df.groupBy("drug_name")
       .agg(

@@ -1,3 +1,5 @@
 local_data/
 stream_input/
-stream_checkpoint/.DS_Store
+stream_checkpoint/
+.DS_Store
+outputs/.DS_Store

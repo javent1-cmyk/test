@@ -1,3 +1,3 @@
 local_data/
 stream_input/
-stream_checkpoint/
+stream_checkpoint/.DS_Store

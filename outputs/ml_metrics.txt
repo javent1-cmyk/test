@@ -1,0 +1,11 @@
+MLlib Classification Metrics
+============================
+
+Model: Logistic Regression
+Target: positive_review
+Features: effectiveness, sideEffects, condition_clean, review_length
+
+Total test records: 710
+Correct predictions: 627
+Accuracy: 0.8831
+AUC: 0.9380

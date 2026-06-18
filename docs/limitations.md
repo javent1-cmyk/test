@@ -1,7 +1,3 @@
-
-### `docs/limitations.md`
-
-```markdown
 # Limitations
 
 This project has several limitations.
